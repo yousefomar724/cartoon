@@ -30,6 +30,10 @@ module.exports = {
       fontFamily: {
         cairo: ['Cairo', 'sans-serif'],
       },
+      backgroundImage: {
+        homeBg:
+          'url(https://flowind.net/wp-content/uploads/2021/08/cool-background-1.png)',
+      },
     },
   },
   plugins: [],

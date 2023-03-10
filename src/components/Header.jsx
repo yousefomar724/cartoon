@@ -11,16 +11,16 @@ const Header = () => {
   return (
     <header className='fixed z-10 w-full shadow-lg bg-white'>
       {/* upper Header */}
-      <div className='bg-gradient-to-r from-primary-900 to-secondary-900 px-4 py-2 hidden md:block'>
+      <div className='bg-gradient-to-r from-secondary-900 via-primary-900 to-secondary-900 px-4 py-2 hidden md:block'>
         <div className='text-sm text-white flex justify-between'>
           <a
             href='https://paypal.com'
             target='_blank'
             rel='noreferrer'
-            className='flex gap-2 items-center py-2 px-10 rounded-full bg-[#172e82] text-gray-200 hover:text-white transition'
+            className='flex gap-2 items-center py-2 px-10 rounded-full bg-primary-900 text-gray-200 hover:text-white transition'
           >
             <span className='text-sm'>
-              يمكنكم مساعدتنا مالياً من هنا لإبقاء كارتون في إستمرار
+              يمكنكم مساعدتنا مالياً من هنا لإبقاء Ovegrad في إستمرار
             </span>
             <BsPaypal />
           </a>
@@ -41,9 +41,12 @@ const Header = () => {
       </div>
 
       {/* Lower Header */}
-      <div className='hidden md:flex justify-between max-w-7xl mx-auto px-5 py-3 items-center'>
+      <div
+        className='hidden md:flex justify-between max-w-7xl mx-auto px-5 py-3 items-center'
+        dir='ltr'
+      >
         <Link to='/'>
-          <h4 className='text-4xl font-bold'>كارتون</h4>
+          <h4 className='text-4xl font-bold'>Ovegrad</h4>
         </Link>
 
         <div className='lg:flex hidden gap-4 justify-center text-primary-900'>
@@ -75,7 +78,7 @@ const Header = () => {
           {/* Logo */}
           <div className='flex flex-1 md:hidden'>
             <Link to='/' className='text-3xl font-bold text-primary-900'>
-              كارتون
+              Ovegrad
             </Link>
           </div>
 

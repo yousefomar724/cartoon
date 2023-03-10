@@ -22,7 +22,7 @@ const Footer = () => {
         </a>
       </div>
       <p className='text-base md:text-lg font-medium order-3 md:order-2 text-white'>
-        جميع الحقوق محفوظة لكارتون
+        جميع الحقوق محفوظة Ovegrad
       </p>
       <div className='flex items-center justify-center gap-6 order-2 md:order-3'>
         {socialLinks.map((link) => (

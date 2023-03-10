@@ -1,22 +1,21 @@
 import { useParams } from 'react-router-dom'
 import { programs } from '../data'
-import Hero from '../components/Hero'
-import Banner from '../components/Banner'
-import EpisodeCard from '../components/EpisodeCard'
+import SeasonCard from '../components/SeasonCard'
 
 const Seasons = () => {
   const { showName } = useParams()
-  const show = programs.find((program) => program.name === showName)
+  const show = programs.find((program) => program.name_en === showName)
   return (
-    <>
-      <Hero {...show} />
-      <Banner showImg={show.bannerImg} />
-      <section className='flex items-center justify-center gap-16 flex-wrap max-w-6xl mx-auto px-4 mb-10 m-0 md:-mt-40'>
-        {show.episodes.map((episode) => (
-          <EpisodeCard key={episode.id} episode={episode} />
-        ))}
-      </section>
-    </>
+    <section className='flex items-center justify-center gap-16 flex-wrap max-w-6xl mx-auto px-4 my-20'>
+      {show?.seasons?.map((season) => (
+        <SeasonCard
+          key={season.id}
+          season={season}
+          name_en={show.name_en}
+          name_ar={show.name_ar}
+        />
+      ))}
+    </section>
   )
 }
 
